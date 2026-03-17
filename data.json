@@ -1,4 +1,4 @@
 {
-  "text": "import socket\n\ndef wake_on_lan(mac_address):\n    # 清理 MAC 地址\n    mac_address = mac_address.replace(':', '').replace('-', '')\n    if len(mac_address) != 12:\n        raise ValueError(\"MAC地址格式不对\")\n\n    # 构造魔术包\n    data = bytes.fromhex('FF' * 6 + mac_address * 16)\n\n    # 发送到局域网广播地址\n    with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:\n        s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)\n        s.sendto(data, ('255.255.255.255', 9))  # 端口9是默认WOL端口\n\nif __name__ == '__main__':\n    mac = 'XX:XX:XX:XX:XX:XX'  # 把这里换成你的电脑MAC地址\n    wake_on_lan(mac)\n    print(\"Magic Packet 已发送！\")",
+  "text": "Heplace('-', '')\n    if len(mac_address) != 12:\n        raise ValueError(\"MAC地址格式不对\")\n\n    # 构造魔术包\n    data = bytes.fromhex('FF' * 6 + mac_address * 16)\n\n    # 发送到局域网广播地址\n    with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:\n        s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)\n        s.sendto(data, ('255.255.255.255', 9))  # 端口9是默认WOL端口\n\nif __name__ == '__main__':\n    mac = 'XX:XX:XX:XX:XX:XX'  # 把这里换成你的电脑MAC地址\n    wake_on_lan(mac)\n    print(\"Magic Packet 已发送！\")",
   "links": []
 }

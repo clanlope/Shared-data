@@ -1,4 +1,9 @@
 {
   "text": "def select_folder(l):\n    [print(i, v) for i, v in enumerate(l, 1)]\n    while (i := input()) != \"0\":\n        if i.isdigit() and (i := int(i)) <= len(l):\n            return l[i - 1]",
-  "links": []
+  "links": [
+    {
+      "url": "http://tmpfiles.org/dl/31099398/flclash-0.8.92-linux-amd64.deb",
+      "timestamp": 1774712290919
+    }
+  ]
 }
